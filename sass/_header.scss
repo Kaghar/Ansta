@@ -1,0 +1,19 @@
+.header{
+    grid-column: center-start / center-end;
+    
+    display:grid;
+    grid-gap: 2rem;
+    justify-items: center;
+    
+
+    &__btn{
+        align-self: start;
+
+        &:link,
+        &:active{
+            text-decoration: none;
+            text-align: center;
+
+        }
+    }
+}

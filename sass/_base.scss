@@ -1,0 +1,65 @@
+/*Variables */
+
+$color-primary: #ff9600;
+$color-primary-light: #ffc879;
+$color-secondary: #00405D;
+$color-background: #2b4c81;
+
+$color-text: #969696;
+
+$shadow-one: 0 1rem 2rem rgba(0,0,0,.2);
+$shadow-two: 0 .5rem 1rem rgba(0,0,0,.2);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+    color: $color-text;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+
+    background-image: linear-gradient(rgba($color-background,.7), rgba($color-background,.7)) ,url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+@mixin table {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
